@@ -1,0 +1,12 @@
+Description: Sent byte to relay over TCP when triggered by event
+Copyright 2017
+Author: Daniel Kucera
+Email: daniel.kucera@gmail.com
+License: GNU GPL 3.0
+
+Requirements: Python blinker module (included with software distro)
+
+##### List all plugin files below preceded by a blank line [file_name.ext path] relative to OSPi directory #####
+
+tcp_event.py plugins
+tcp_event.manifest plugins/manifests
