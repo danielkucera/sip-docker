@@ -1,9 +1,6 @@
-FROM python:2.7-buster
+FROM docker.io/library/python:3.9
 
-# VOLUME /home
-WORKDIR /home/pi/SIP
-RUN mkdir -p /home/pi/SIP
-RUN cd /home/pi && git clone https://github.com/Dan-in-CA/SIP.git 
-RUN chmod +x /home/pi/SIP/sip.sh
+RUN cd /home && git clone https://github.com/Dan-in-CA/SIP.git 
+WORKDIR /home/SIP
 EXPOSE 80
-ENTRYPOINT ["python", "/home/pi/SIP/sip.py"]
+ENTRYPOINT ["python3", "/home/SIP/sip.py"]
